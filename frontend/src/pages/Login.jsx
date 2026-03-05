@@ -20,7 +20,9 @@ export default function Login() {
             await login(email, password)
             navigate('/dashboard')
         } catch (err) {
-            setError(err.response?.data?.detail || 'Login failed. Please try again.')
+            console.error('Login error:', err)
+            const detail = err.response?.data?.detail || err.message || 'Unknown error'
+            setError(`Login failed: ${detail}${err.response ? ` (${err.response.status})` : ''}`)
         } finally {
             setLoading(false)
         }
