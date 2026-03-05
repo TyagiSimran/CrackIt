@@ -32,7 +32,9 @@ export default function Register() {
             await register(email, password, fullName)
             navigate('/dashboard')
         } catch (err) {
-            setError(err.response?.data?.detail || 'Registration failed.')
+            console.error('Registration error:', err)
+            const detail = err.response?.data?.detail || err.message || 'Unknown error'
+            setError(`Registration failed: ${detail}${err.response ? ` (${err.response.status})` : ''}`)
         } finally {
             setLoading(false)
         }
