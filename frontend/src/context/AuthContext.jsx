@@ -23,6 +23,7 @@ export function AuthProvider({ children }) {
 
     const login = async (email, password) => {
         const res = await api.post('/auth/login', { email, password })
+        console.log('[CrackIt] Login response:', res.status, res.data)
         const { access_token, user: userData } = res.data
         localStorage.setItem('crackit_token', access_token)
         localStorage.setItem('crackit_user', JSON.stringify(userData))

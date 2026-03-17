@@ -131,7 +131,9 @@ async def forgot_password(req: ForgotPasswordRequest):
     
     # Send real email
     from services.email_service import send_reset_email
-    reset_link = f"http://localhost:5173/reset-password?token={token}"
+    import os
+    frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173").rstrip("/")
+    reset_link = f"{frontend_url}/reset-password?token={token}"
     sent = send_reset_email(user["email"], reset_link)
     
     if not sent:
