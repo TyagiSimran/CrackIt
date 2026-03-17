@@ -22,12 +22,32 @@ export function AuthProvider({ children }) {
     }, [])
 
     const login = async (email, password) => {
+        console.log('[CrackIt] Starting login request...')
         const res = await api.post('/auth/login', { email, password })
-        console.log('[CrackIt] Login response:', res.status, res.data)
+        console.log('[CrackIt] Login response status:', res.status)
+        console.log('[CrackIt] Login response data:', JSON.stringify(res.data))
+        console.log('[CrackIt] Login response data type:', typeof res.data)
+        
+        if (!res.data || typeof res.data !== 'object') {
+            throw new Error(`Unexpected response format: got ${typeof res.data} instead of object. Raw: ${JSON.stringify(res.data).substring(0, 200)}`)
+        }
+        
         const { access_token, user: userData } = res.data
+        
+        if (!access_token) {
+            throw new Error(`No access_token in response. Keys received: ${Object.keys(res.data).join(', ')}`)
+        }
+        if (!userData) {
+            throw new Error(`No user data in response. Keys received: ${Object.keys(res.data).join(', ')}`)
+        }
+        
+        console.log('[CrackIt] Token received, length:', access_token.length)
+        console.log('[CrackIt] User data:', JSON.stringify(userData))
+        
         localStorage.setItem('crackit_token', access_token)
         localStorage.setItem('crackit_user', JSON.stringify(userData))
         setUser(userData)
+        console.log('[CrackIt] Login complete, user state set')
         return userData
     }
 

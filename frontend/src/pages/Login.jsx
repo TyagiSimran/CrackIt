@@ -12,17 +12,24 @@ export default function Login() {
     const { login } = useAuth()
     const navigate = useNavigate()
 
+    const [debug, setDebug] = useState('')
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError('')
+        setDebug('')
         setLoading(true)
         try {
-            await login(email, password)
+            const userData = await login(email, password)
+            setDebug(`Login OK! User: ${JSON.stringify(userData)}`)
+            console.log('[CrackIt] Navigating to /dashboard...')
             navigate('/dashboard')
         } catch (err) {
-            console.error('Login error:', err)
+            console.error('[CrackIt] Login error:', err)
+            console.error('[CrackIt] Error details:', err.response?.status, err.response?.data, err.message)
             const detail = err.response?.data?.detail || err.message || 'Unknown error'
-            setError(`Login failed: ${detail}${err.response ? ` (${err.response.status})` : ''}`)
+            setError(`Login failed: ${detail}${err.response ? ` (Status: ${err.response.status})` : ''}`)
+            setDebug(`Error raw: ${JSON.stringify(err.response?.data || err.message)}`)
         } finally {
             setLoading(false)
         }
@@ -52,7 +59,11 @@ export default function Login() {
                                 {error}
                             </div>
                         )}
-
+                        {debug && (
+                            <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-mono break-all">
+                                <strong>DEBUG:</strong> {debug}
+                            </div>
+                        )}
                         <div>
                             <label className="block text-sm font-bold text-dim mb-2 ml-1">Email Address</label>
                             <div className="relative group">
