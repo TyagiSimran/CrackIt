@@ -1,192 +1,198 @@
-🚀 CrackIt – AI-Powered Interview Preparation Platform
+# 🚀 CrackIt – AI-Powered Interview Preparation Platform
+
+> 🎯 Practice. Improve. Crack Interviews with AI.
+
+CrackIt is an intelligent interview preparation system that simulates real-world interview environments using AI.  
+It helps candidates practice interviews, receive instant feedback, and improve performance using data-driven insights.
+
+---
+
+## 📦 💡 Problem Statement
+
+❌ No real interview practice  
+❌ Lack of structured feedback  
+❌ Difficulty preparing for multiple interview types  
+
+👉 Solution:  
+✔ AI-driven mock interviews  
+✔ Personalized evaluation  
+✔ Resume-based question generation  
+
+---
+
+## 🎯 Key Highlights (ATS Friendly)
+
+✔ Full-stack AI application (FastAPI + React + Supabase)  
+✔ RESTful API design for scalable backend  
+✔ JWT Authentication + Role-based Access Control  
+✔ AI integration (Groq API) for answer evaluation  
+✔ Resume parsing system (PDF → skills extraction)  
+✔ PostgreSQL query optimization using indexing  
+✔ Interactive dashboard with analytics  
+
+---
+
+## 🛠️ Tech Stack
+
+### 🔙 Backend
+- FastAPI (High-performance APIs)  
+- PostgreSQL (Supabase)  
+- JWT Authentication  
+- Groq AI API  
+- PyPDF2 (Resume Parsing)  
+
+### 🔜 Frontend
+- React.js + Vite  
+- Tailwind CSS  
+- React Router  
+- Axios  
+- Recharts (Data Visualization)  
+
+---
+
+## 🏗️ System Architecture
+
+┌────────────────────┐  
+│   Frontend (React) │  
+└─────────┬──────────┘  
+          ↓  
+┌────────────────────┐  
+│   FastAPI Backend  │  
+└─────────┬──────────┘  
+          ↓  
+┌────────────────────┐  
+│ Supabase PostgreSQL│  
+└─────────┬──────────┘  
+          ↓  
+┌────────────────────┐  
+│   Groq AI Engine   │  
+└────────────────────┘  
 
-CrackIt is an intelligent interview preparation system that simulates real-world interview environments using AI.
-It helps candidates practice interviews, receive instant feedback, and improve performance with data-driven insights.
+---
 
-💡 Problem Statement
+## 🔥 Core Features
+
+### 🔐 Authentication System
+✔ Secure login/register (JWT)  
+✔ Role-based access (User/Admin)  
 
-Many candidates struggle with:
+### 🧠 AI Interview Engine
+✔ Real-time mock interviews  
+✔ AI scoring & feedback  
+✔ Interview categories:
+- Technical  
+- HR  
+- Behavioral  
+- System Design  
+- Aptitude  
+- Resume-based  
 
-Lack of real interview practice
+### 📄 Resume Intelligence
+✔ Upload PDF resume  
+✔ Extract skills & projects  
+✔ Generate personalized questions  
 
-No structured feedback
+### 📊 Performance Dashboard
+✔ Track scores & progress  
+✔ Visual analytics (charts)  
 
-Difficulty preparing for different interview types
+### 🛠 Admin Panel
+✔ Manage question bank  
+✔ Control system data  
 
-👉 CrackIt solves this by providing AI-driven mock interviews + personalized evaluation
+---
 
-🎯 Key Highlights (ATS Optimized)
+## 📂 Folder Structure
 
-Built a full-stack AI application using FastAPI, React, and Supabase
+CrackIt/  
+├── backend/  
+│   ├── main.py  
+│   ├── routers/  
+│   ├── models/  
+│   └── utils/  
+│  
+├── frontend/  
+│   ├── src/  
+│   ├── components/  
+│   ├── pages/  
+│   └── context/  
 
-Designed RESTful APIs for interview sessions, authentication, and analytics
+---
 
-Implemented JWT-based authentication & role-based access control
+## ⚙️ Setup Instructions
 
-Integrated AI (Groq API) for automated answer evaluation and scoring
+### 1️⃣ Clone Repository
+git clone https://github.com/your-username/crackit.git  
+cd crackit  
 
-Developed resume parsing system to generate personalized questions
+### 2️⃣ Backend Setup
+cd backend  
+pip install -r requirements.txt  
+uvicorn main:app --reload  
 
-Optimized database queries using PostgreSQL indexing
+### 3️⃣ Frontend Setup
+cd frontend  
+npm install  
+npm run dev  
 
-Built interactive dashboard using charts for performance tracking
+---
 
-🛠️ Tech Stack
-Backend
+## 🗄️ Database Design
 
-FastAPI (High-performance APIs)
+users → authentication & roles  
+questions → interview questions  
+interview_sessions → session tracking  
+interview_responses → answers + AI feedback  
+resumes → parsed resume data  
 
-PostgreSQL (Supabase)
+---
 
-JWT Authentication
+## 🔐 Security Features
 
-Groq AI API
+✔ JWT-based authentication  
+✔ Password hashing (bcrypt)  
+✔ Protected API routes  
+✔ CORS configuration  
 
-PyPDF2 (Resume Parsing)
+---
 
-Frontend
+## 📈 Impact
 
-React.js + Vite
+✔ Improves interview readiness  
+✔ Provides real-time feedback  
+✔ Identifies strengths & weaknesses  
+✔ Enables structured preparation  
 
-Tailwind CSS
+---
 
-React Router
+## 🚀 Future Enhancements
 
-Axios
+🎤 Voice-based interviews  
+🤖 Advanced LLM evaluation  
+📱 Mobile-first UI  
+🌍 Multi-language support  
 
-Recharts (Data Visualization)
+---
 
-🏗️ System Architecture
-Frontend (React)
-      ↓
-API Layer (FastAPI)
-      ↓
-Database (Supabase PostgreSQL)
-      ↓
-AI Evaluation (Groq API)
-🔥 Core Features
-🔐 Authentication System
+## 👨‍💻 Author
 
-Secure login/register using JWT
+**Vishal Chaturvedi**  
+MCA | Full Stack Developer | AI Enthusiast  
 
-Role-based access (User/Admin)
+---
 
-🧠 AI Interview Engine
+## ⭐ Why This Project Stands Out
 
-Real-time mock interviews
+✔ AI + Full Stack integration  
+✔ Real-world problem solving  
+✔ Strong backend + frontend architecture  
+✔ Production-ready design  
 
-AI-generated scoring & feedback
+---
 
-Multiple interview categories:
+## 📌 Recruiter Note
 
-Technical
-
-HR
-
-Behavioral
-
-System Design
-
-Aptitude
-
-Resume-based
-
-📄 Resume Intelligence
-
-Upload PDF resumes
-
-Extract skills & projects
-
-Generate personalized interview questions
-
-📊 Performance Dashboard
-
-Track scores & progress
-
-Visual analytics using charts
-
-🛠 Admin Controls
-
-Manage question bank
-
-Control platform data
-
-📂 Folder Structure
-backend/
-  ├── main.py
-  ├── routers/
-  ├── models/
-  ├── utils/
-
-frontend/
-  ├── src/
-  ├── components/
-  ├── pages/
-  ├── context/
-⚙️ Setup Instructions
-1️⃣ Clone Repo
-git clone https://github.com/your-username/crackit.git
-cd crackit
-2️⃣ Backend Setup
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
-3️⃣ Frontend Setup
-cd frontend
-npm install
-npm run dev
-🗄️ Database Design
-
-users → authentication & roles
-
-questions → categorized interview questions
-
-interview_sessions → session tracking
-
-interview_responses → answers + AI feedback
-
-resumes → parsed resume data
-
-🔐 Security Features
-
-JWT token-based authentication
-
-Password hashing using bcrypt
-
-Protected API routes
-
-CORS configuration
-
-📈 Impact
-
-Improves interview readiness through real-time feedback
-
-Helps users identify strengths & weaknesses
-
-Provides structured preparation strategy
-
-🚀 Future Enhancements
-
-🎤 Voice-based interviews
-
-🤖 Advanced LLM-based evaluation
-
-📱 Mobile-first UI
-
-🌍 Multi-language support
-
-👨‍💻 Author
-
-Vishal Chaturvedi
-Simran Tyagi 
-
-
-⭐ Why This Project Stands Out
-
-Combines AI + Full Stack Development
-
-Solves a real-world problem (interview preparation)
-
-Demonstrates backend, frontend, and system design skills
-
-Production-ready architecture
+✔ Backend architecture & API design  
+✔ AI integration in real applications  
+✔ Full-stack development skills  
+✔ Database design & optimization  
