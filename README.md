@@ -188,11 +188,4 @@ resumes → parsed resume data
 ✔ Strong backend + frontend architecture  
 ✔ Production-ready design  
 
----
 
-## 📌 Recruiter Note
-
-✔ Backend architecture & API design  
-✔ AI integration in real applications  
-✔ Full-stack development skills  
-✔ Database design & optimization  
