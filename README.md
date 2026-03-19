@@ -177,7 +177,7 @@ resumes → parsed resume data
 ## 👨‍💻 Author
 
 **Vishal Chaturvedi**  
-MCA | Full Stack Developer | AI Enthusiast  
+**Simran Tyagi**
 
 ---
 
