@@ -122,7 +122,7 @@ CrackIt/
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone Repository
-git clone https://github.com/your-username/crackit.git  
+git clone https://github.com/TyagiSimran/CrackIt.git
 cd crackit  
 
 ### 2️⃣ Backend Setup
