@@ -176,8 +176,9 @@ resumes → parsed resume data
 
 ## 👨‍💻 Author
 
-**Vishal Chaturvedi**  
 **Simran Tyagi**
+**Vishal Chaturvedi**  
+**Vanshika Garg**
 
 ---
 
